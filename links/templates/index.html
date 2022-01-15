@@ -1,0 +1,13 @@
+<!-- <h1>{{ message }}</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Send</button>
+</form> -->
+<!-- {{ links }} -->
+<a href="/create"></a>
+    {% for link in links %}
+    <p>{{ link.code }} - {{ link.url }}</p>
+    {% endfor %}
