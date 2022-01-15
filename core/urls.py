@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from links.views import index, create,show,update,delete,go
+from links.views import index,create,show,update,delete,go
 
 urlpatterns = [
     path('', index, name='index'),

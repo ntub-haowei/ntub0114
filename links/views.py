@@ -11,11 +11,9 @@ def index(request):
 def create(request):
     form = LinkForm(request.POST or None)
     if form.is_valid():
-        form.save()
+        link = form.save()
         return redirect("show",pk=link.pk)
-    return render(request,'create.html',{
-        'form' : form,
-    })
+    return render(request,'create.html',{'form' : form,})
 
 
 

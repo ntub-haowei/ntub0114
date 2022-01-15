@@ -7,7 +7,7 @@
     <button type="submit">Send</button>
 </form> -->
 <!-- {{ links }} -->
-<a href="{% url 'create' %}}">create</a>
+<a href="{% url 'create' %}">create</a>
 {% for link in links %}
 <p>{{ link.code }} - <a href="{% url 'show' pk=link.pk %}">show</a></p>
 {% endfor %}
