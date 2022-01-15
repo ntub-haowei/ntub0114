@@ -1,0 +1,5 @@
+Code:{{ link.code }}  <br>
+URL:{{ link.url }} <br>
+
+<a href="{% url 'update' pk=link.pk %}">Update</a>
+<a href="{% url 'delete' pk=link.pk %}">Delete</a>

@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from links.views import index, create
+from links.views import index, create,show,update,delete,go
 
 urlpatterns = [
-    path('', index),
-    path('create/', create),
+    path('', index, name='index'),
+    path('create/', create,name='create'),
+    path('<int:pk>',show,name='show'),
+    path('<int:pk>/update/',update,name='update'),
+    path('<int:pk>/delete/',delete,name='delete'),
+    path('<str:code>/',go,name='go'),
     path('admin/', admin.site.urls),
 ]
